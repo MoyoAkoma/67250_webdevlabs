@@ -23,3 +23,20 @@ th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+form * {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+input[type="submit"] {
+    background-color: #009000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #007A00;
+}
