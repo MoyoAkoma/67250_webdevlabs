@@ -14,3 +14,12 @@
     color: #333333;
     margin-right: 15px;
 }
+th {
+    padding: 12px 0;
+    background-color: #333
+    color: white;
+    width: fit-content;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
