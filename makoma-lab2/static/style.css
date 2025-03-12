@@ -9,3 +9,8 @@
 #webname {
     color: #009000;
 }
+.nav-link {
+    text-decoration: none;
+    color: #333333;
+    margin-right: 15px;
+}
