@@ -9,3 +9,9 @@ function SumNPrint(x1,x2){
 }
 SumNPrint(x,y);
 SumNPrint(A,B);
+//check if this will work
+if (length(C)>z) {
+    print(C)
+} else if (length(C)=z) {
+    print("Good Job!")
+} else {print(z)}
