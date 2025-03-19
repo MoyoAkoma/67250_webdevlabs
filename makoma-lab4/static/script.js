@@ -14,19 +14,6 @@ if (C.length>z) {
     console.log("Good Job!");
 } else {console.log(z);}
 
-let L1 = ["Watermelon", "Pineapple", "Pear", "Banana"];
-let L2 = ["Apple", "Banana", "Kiwi", "Orange"];
-
-function findTheBanana(array) {
-    array.forEach((item) => {
-      if (item === "Banana") {
-        alert("Banana found!");
-      }});
-}
-
-findTheBanana(L1);
-findTheBanana(L2);
-
 function greetingFunc() {
     let d = new Date(); //date
     let h = d.getHours(); //hour
@@ -61,3 +48,27 @@ function showList() {
   document.getElementById("funList").style.display = "block";
   document.getElementById("showListButt").style.display = "none";
 }
+
+$(document).ready(function() {
+  $("#toggleBio").onclick(function() {
+      if ($("#longBio").is(":visible")) {
+          $("#longBio").hide();
+          $("#toggleBio").text("Read More");
+      } else {
+          $("#longBio").show();
+          $("#toggleBio").text("Read Less");
+      }});
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  let name = document.getElementById("name").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let message = document.getElementById("message").value.trim();
+  let errorMessage = document.getElementById("errorMessage");
+
+  if (name === "" || email === "" || message === "") {
+      event.preventDefault();
+      errorMessage.textContent = "Please fill all required fields.";
+  } else {
+      errorMessage.textContent = "";
+  }});
