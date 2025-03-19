@@ -52,3 +52,8 @@ function greetingFunc() {
     greetingFunc();}
 
   window.addEventListener("load", greetingFunc);
+
+function addYear(){
+  document.getElementById("copyYear").innerText = `© ${new Date().getFullYear()} Moyo Akoma`;
+}
+
