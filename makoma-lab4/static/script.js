@@ -57,3 +57,7 @@ function addYear(){
   document.getElementById("copyYear").innerText = `© ${new Date().getFullYear()} Moyo Akoma`;
 }
 
+function showList() {
+  document.getElementById("funList").style.display = "block";
+  document.getElementById("showListButt").style.display = "none";
+}
