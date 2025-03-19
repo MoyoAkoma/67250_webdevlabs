@@ -41,7 +41,7 @@ function greetingFunc() {
   window.addEventListener("load", greetingFunc);
 
 function addYear(){
-  document.getElementById("copyYear").innerText = `© ${new Date().getFullYear()} Moyo Akoma`;
+  document.getElementById("copyYear").innerText = `© ${new Date().getFullYear()} Moyo Akoma. All rights reserved.`;
 }
 
 function showList() {
@@ -50,7 +50,7 @@ function showList() {
 }
 
 $(document).ready(function() {
-  $("#toggleBio").onclick(function() {
+  $("#toggleBio").click(function() {
       if ($("#longBio").is(":visible")) {
           $("#longBio").hide();
           $("#toggleBio").text("Read More");
