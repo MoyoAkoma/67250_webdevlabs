@@ -28,19 +28,19 @@ findTheBanana(L1);
 findTheBanana(L2);
 
 function greetingFunc() {
-    let d = new Date(); // Create a Date object
-    let h = d.getHours(); // Get the current hour (0-23)
+    let d = new Date(); //date
+    let h = d.getHours(); //hour
     let greetingMessage = "";
   
-    if (h < 12) {
+    if (6>= h && h < 12) {
       greetingMessage = "Good morning";
     } else if (h >= 12 && h < 18) {
       greetingMessage = "Good afternoon";
-    } else if (h >= 18 && h < 20) {
+    } else if (h >= 18 && h < 22) {
       greetingMessage = "Good evening";
-    } else {greetingMessage = "Good night!";}
+    } else {greetingMessage = "Fancy seeing you here at this hour";}
 
-    greetingMessage += ", I am Moyo Akoma";
+    greetingMessage += ", my name is Moyo Akoma";
   
     let greetingElement = document.getElementById("greeting");
     if (greetingElement) {
