@@ -48,3 +48,23 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #007A00;
 }
+
+#ReadMoreButt{
+    background-color: lightgray;
+    border: 0px;
+    border-radius: 16px;
+    font-size:large;}
+
+#shortBio{
+    display: block;}
+
+#readLess, #longIntro{
+    display: none;}
+
+#readLess, #readMore{
+    font-style: italic;
+    background-color: lightgrey;}
+
+#validateMess{
+    width: max-content;
+    margin: auto;}

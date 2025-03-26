@@ -48,27 +48,28 @@ function showList() {
   document.getElementById("funList").style.display = "block";
   document.getElementById("showListButt").style.display = "none";
 }
-
-$(document).ready(function() {
-  $("#toggleBio").click(function() {
-      if ($("#longBio").is(":visible")) {
-          $("#longBio").hide();
-          $("#toggleBio").text("Read More");
-      } else {
-          $("#longBio").show();
-          $("#toggleBio").text("Read Less");
-      }});
+$(document).ready(function(){
+  $("#longBio").hide();  //Hide on load
+  $("#readLess").hide(); //Hide on load
+$("#readMore").click(function(){
+  $("#longBio").show();  // Show the long introduction text
+  $("#readLess").show();   // Show the "Read Less" button
+  $("#readMore").hide();   // Hide the "Read More" button  
 });
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-  let name = document.getElementById("name").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let message = document.getElementById("message").value.trim();
-  let errorMessage = document.getElementById("errorMessage");
+$("#readLess").click(function(){ 
+  $("#longBio").hide(); // Hide the long introduction text
+  $("#readLess").hide();  // Hide the "Read Less" button itself
+  $("#readMore").show();  // Show the "Read More" button  
+});});
 
-  if (name === "" || email === "" || message === "") {
-      event.preventDefault();
-      errorMessage.textContent = "Please fill all required fields.";
+function validate() {
+  var name = document.getElementById("name");
+  var email = document.getElementById("email");
+  var message = document.getElementById("comment");
+  var error = document.getElementById("validateMess");
+
+  if (!name.checkValidity() || !email.checkValidity() || !message.checkValidity()) {
+      error.innerHTML = "Please fill all required fields to stay in contact!";
   } else {
-      errorMessage.textContent = "";
-  }});
+    error.innerHTML = "";  }};

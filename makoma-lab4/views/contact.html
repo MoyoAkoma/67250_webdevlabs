@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <script defer src="../static/script.js"></script>
+    <script src="../static/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <title>Moyo Akoma</title>
 </head>
 
-<body>
+<body onload="addYear()">
     <header>
         <h1 id="webname">Moyo Akoma</h1>
         <nav>
@@ -30,17 +30,15 @@
 
         <form>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
-    
+            <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-    
+            <input type="email" id="email" name="email" required>
             <label for="comment">Comment:</label>
-            <textarea id="comment" name="comment" required></textarea><br>
-            <p id="errorMessage" style = "color:red;"></p>
-            <input type="submit" value="Send">
+            <textarea id="comment" name="comment" required></textarea>
+            <input type="submit" value="Send" onclick="validate()">
         </form>
-    
+        <p id="validateMess" style = "color:red;"></p>
+
         <h3>My Contact Information</h3>
         <table border="1">
             <tr>
